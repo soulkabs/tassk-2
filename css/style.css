@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial Regular', sans-serif; }
+
+body {
+  margin: 10px; }
+
+h1 {
+  font-weight: bold;
+  font-size: 24pt;
+  color: #7c002f; }
+
+main {
+  max-width: 1250px; }
+
+.info, .weather {
+  margin-left: 20px; }
+
+p {
+  font-size: 16pt; }
+
+.text {
+  color: #dfe4e7; }
+
+.weather {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 14% 14% 14% 14% 14% 14% 14%;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+  grid-gap: 1%;
+  margin-top: 15px; }
+  .weather .weather__part {
+    border: 2px solid #7c7c7c;
+    -webkit-box-shadow: 0 0 10px #7c7c7c;
+    box-shadow: 0 0 10px #7c7c7c;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 450px; }
+  .weather img {
+    width: 100%;
+    position: relative;
+    top: -70px; }
+  .weather .weather__name {
+    background-color: #7c7c7c;
+    color: #fff;
+    width: 100%; }
+  .weather .weather__name_position {
+    height: 20%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .weather .bedWeather {
+    display: none;
+    text-align: center; }
+  .weather .weather__image_position {
+    width: 90%; }
+
+/*====== SWITCH ======*/
+.switch-btn {
+  margin-bottom: 10px;
+  width: 45px;
+  height: 20px;
+  border-radius: 12px;
+  border: 1px solid #7c7c7c;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms; }
+
+.switch-btn::after {
+  content: "";
+  height: 28px;
+  width: 28px;
+  border: 1px solid #7c7c7c;
+  border-radius: 50%;
+  background: #f9fdc0;
+  top: -5px;
+  left: -5px;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  position: absolute; }
+
+.switch-on {
+  background: #f9fdc0; }
+
+.switch-on::after {
+  left: 20px;
+  background: #7c002f; }

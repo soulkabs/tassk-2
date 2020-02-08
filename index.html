@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Task №2</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+	<!--========== HEADER ==========-->
+	<header>
+		<h1>Критические значения параметров метеорологических явлений</h1>	
+	</header>
+	<!--========== END HEADER ==========-->
+
+	<!--========== CONTENT ==========-->
+	<main>
+		<div class="info">
+			<br><p>Сами по себе атмосферные осадки и изменения температур не несут опасности, значение имеет то, насколько они могут усилиться. Когда мелкий дождь становится затяжным или превращается в сильный дождь (ливень), возникает опасность подтопления. Усиление, поначалу легкого ветерка до шквалистого ветра повышает вероятность обрыва проводов. То же относится и к другим метеорологическим явлениям. С помощью переключателя «усильте» то или иное явление природы и посмотрите, при каких критических параметрах оно становятся опасным.</p>
+			<p class="text">*Сдвиньте переключатель под иконкой, чтобы увидеть критические параметры.</p>
+		</div>
+		<div class="weather">
+			<div class="weather__part" id="wind">
+				<div class="weather__name weather__name_position">
+					<p class="goodWeather">Ветер</p>
+					<p class="bedWeather">Сильный ветер (шквалистый)</p>
+				</div>
+				<div class="weather__image weather__image_position">
+					<img class="goodWeather" src="img/1_off.png" alt="Wind">
+					<div class="bedWeather">
+						<img src="img/1_on.png" alt="Wind">
+						<p>Скорость порывов от 25м/c и более.</p><br><br><br><br> 
+					</div>
+				</div>
+				<div class="switch-btn" onclick="changeWeather('wind')"></div>
+			</div>
+			<div class="weather__part" id="rain">
+				<div class="weather__name weather__name_position">
+					<p class="goodWeather">Дождь</p>
+					<p class="bedWeather">Сильный дождь (Ливень)</p>
+				</div>
+				<div class="weather__image weather__image_position">
+					<img class="goodWeather" src="img/2_off.png" alt="rain">
+					<div class="bedWeather">
+						<img src="img/2_on.png" alt="rain">
+						<p>Кол-во осадков 100 мм и более, в период менее чем за 12 часов.</p>
+					</div> 
+				</div>
+				<div class="switch-btn" onclick = "changeWeather('rain')"></div>
+			</div>
+			<div class="weather__part" id="snow">
+				<div class="weather__name weather__name_position">
+					<p class="goodWeather">Снег</p>
+					<p class="bedWeather">Сильный снег</p>
+				</div>
+				<div class="weather__image weather__image_position">
+					<img class="goodWeather" src="img/3_off.png" alt="snow">
+					<div class="bedWeather">
+						<img src="img/3_on.png" alt="snow">
+						<p>Кол-во осадков 20 мм и более, в период менее чем за 12 часов.</p><br>
+					</div>
+				</div>
+				<div class="switch-btn" onclick = "changeWeather('snow')"></div>
+			</div>
+			<div class="weather__part" id="blizzard">
+				<div class="weather__name weather__name_position">
+					<p class="goodWeather">Метель</p>
+					<p class="bedWeather">Сильная метель</p>
+				</div>
+				<div class="weather__image weather__image_position">
+					<img class="goodWeather" src="img/4_off.png" alt="blizzard">
+					<div class="bedWeather">
+						<img src="img/4_on.png" alt="blizzard">
+						<p>При ветре 20 м/c в течение суток с выпадением снега.</p><br>
+					</div>
+				</div>
+				<div class="switch-btn" onclick = "changeWeather('blizzard')"></div>
+			</div>
+			<div class="weather__part" id="hail">
+				<div class="weather__name weather__name_position">
+					<p class="goodWeather">Град</p>
+					<p class="bedWeather">Крупный град</p>
+				</div>
+				<div class="weather__image weather__image_position">
+					<img class="goodWeather" src="img/5_off.png" alt="hail">
+					<div class="bedWeather">
+						<img src="img/5_on.png" alt="hail">
+						<p>Диаметр градин 20 мм и более.</p><br><br><br><br><br>
+					</div>
+				</div>
+				<div class="switch-btn" onclick = "changeWeather('hail')"></div>
+			</div>
+			<div class="weather__part" id="ice">
+				<div class="weather__name weather__name_position">
+					<p class="goodWeather">Гололед</p>
+					<p class="bedWeather">Сильный гололед</p>
+				</div>
+				<div class="weather__image weather__image_position">
+					<img class="goodWeather" src="img/6_off.png" alt="ice">
+					<div class="bedWeather">
+						<img src="img/6_on.png" alt="ice">
+						<p>Диаметр отложений на проводах 20 мм и более.</p><br><br>
+					</div>
+				</div>
+				<div class="switch-btn" onclick = "changeWeather('ice')"></div>
+			</div>
+			<div class="weather__part" id="frost">
+				<div class="weather__name weather__name_position">
+					<p class="goodWeather">Мороз</p>
+					<p class="bedWeather">Сильный мороз</p>
+				</div>
+				<div class="weather__image weather__image_position">
+					<img class="goodWeather" src="img/7_off.png" alt="frost">
+					<div class="bedWeather">
+						<img src="img/7_on.png" alt="frost">
+						<p>Температура воздуха у поверхности земли - 30°C и ниже для Европейской части РФ.</p>
+					</div>
+				</div>
+				<div class="switch-btn" onclick = "changeWeather('frost')"></div>
+			</div>
+		</div>
+	</main>
+	<!--========== END CONTENT ==========-->
+
+	<!--========== SCRIPT ==========-->
+	<script src="scripts/scripts.js"></script>
+</body>
+</html>
